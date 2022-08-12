@@ -13,37 +13,40 @@
             align-items: center;
             flex-direction: column;
             text-align: center;
+            background: #87cefa;
         }
         #hex{
             display: block;
-            color: orangered;
         }
 
         .color button {
             background: none;
             outline: none;
             border: 3px solid white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 10px;
 
         }
     </style>
 </head>
 <body>
     <div class="color">
-        <span id="hex">#e74c3c</span>
+        <span id="hex">#87cefa</span>
         <button onclick="getColor()">Get New Color</button>
     </div>
 
     <script>
-        function getColor(){
-            let symbols, color;
-            symbols = "0123456789ABCDEF";
+       function getColor(){
+        let symbols, color;
+        symbols = "0123456789ABCDEF";
 
-            color = "#";
-            for (let i = 0; i<6; i++){
-                color = color + symbols[Math.floor(Math.random() * 16)];
-            }
-            document.body.style.background = color;
+        color = "#"
+        for (let i = 0; i < 6; i++){
+            color = color + symbols[Math.floor(Math.random() *16)];
         }
+        document.body.style.background = color;
+       }
     </script>
 
 </body>
